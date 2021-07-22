@@ -40,10 +40,17 @@ def time_stats_table(df: pd.DataFrame, df_not_managed: pd.DataFrame) -> pd.DataF
 
         stats = df2.describe()
 
+        if weekday in df_overslept.index:
+            overslept = df_overslept.loc[weekday]["one"]
+        elif weekday == "all":
+            overslept = df_overslept["one"].sum()
+        else:
+            overslept = 0
+
         table.append({
             "weekday": "**all**" if weekday == "all" else weekday,
             "drives": int(stats.loc["count", "minutes"]),
-            "overslept": df_overslept.loc[weekday]["one"] if weekday in df_overslept.index else 0,
+            "overslept": overslept,
             "mean arrival": minute_to_time(stats.loc["mean", "minutes"]),
             "earliest": minute_to_time(stats.loc["min", "minutes"]),
             "latest": minute_to_time(stats.loc["max", "minutes"]),

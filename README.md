@@ -39,5 +39,5 @@ for most people but i'm already scared!
 | Wednesday |        4 |           0 | 9:14           | 9:08       | 9:20     |
 | Thursday  |        2 |           2 | 9:01           | 8:59       | 9:03     |
 | Friday    |        1 |           1 | 9:37           | 9:37       | 9:37     |
-| **all**   |       14 |           0 | 9:20           | 8:59       | 9:37     |
+| **all**   |       14 |           3 | 9:20           | 8:59       | 9:37     |
 
