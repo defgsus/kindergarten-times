@@ -5,12 +5,7 @@ The latest time i'm supposed to be there is at about 9:00,
 which i rarely manage. 
 
 [Here](times.csv) is the historic timeline of the arrival times, starting
-at 2021-06-29.
-
-I'm recording the arrival time at the front door. Sometimes i 
-also record the time in the afternoon but mostly i forget
-to look at the clock because there are other kids 
-behind the fence and we might start talking.
+at 2021-06-29, where i'm recording the arrival at the front door.
 
 I do not know about the *kindergarten arrival politics* in other
 countries but in Germany, coming late is usually sanctioned 
@@ -23,6 +18,10 @@ The tag `overslept` in the table means that either my kid or myself
 slept too long and we would arrive far too late, potentially just
 before the midday sleep.
 
+The tag `skived` means various things, voluntary or involuntary. I 
+do not want to record an illness history so it basically just means
+that we did not go to kindergarten without having overslept.
+
 There's another 3 years of kindergarten ahead before we actually 
 have to check-in at school before 8 o'clock. It seems not a big deal
 for most people but i'm already scared!
@@ -30,14 +29,14 @@ for most people but i'm already scared!
 
 # Statistics
 
-*updated on 2021-09-30*
+*updated on 2021-10-05*
 
 | weekday   |   drives |   overslept | mean arrival   | earliest   | latest   |
 |:----------|---------:|------------:|:---------------|:-----------|:---------|
-| Monday    |        5 |           2 | 9:08           | 8:48       | 9:36     |
+| Monday    |        6 |           2 | 9:05           | 8:47       | 9:36     |
 | Tuesday   |       10 |           0 | 9:19           | 8:56       | 9:32     |
 | Wednesday |       10 |           1 | 9:07           | 8:47       | 9:20     |
 | Thursday  |        5 |           4 | 9:05           | 8:51       | 9:28     |
 | Friday    |        5 |           2 | 9:07           | 8:56       | 9:37     |
-| **all**   |       35 |           9 | 9:10           | 8:47       | 9:37     |
+| **all**   |       36 |           9 | 9:10           | 8:47       | 9:37     |
 
