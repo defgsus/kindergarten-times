@@ -29,14 +29,14 @@ for most people but i'm already scared!
 
 # Statistics
 
-*updated on 2021-10-10*
+*updated on 2021-10-11*
 
 | weekday   |   drives |   overslept | mean arrival   | earliest   | latest   |
 |:----------|---------:|------------:|:---------------|:-----------|:---------|
-| Monday    |        6 |           2 | 9:05           | 8:47       | 9:36     |
+| Monday    |        7 |           2 | 9:10           | 8:47       | 9:38     |
 | Tuesday   |       10 |           0 | 9:19           | 8:56       | 9:32     |
 | Wednesday |       11 |           1 | 9:06           | 8:47       | 9:20     |
 | Thursday  |        5 |           4 | 9:05           | 8:51       | 9:28     |
 | Friday    |        6 |           2 | 9:11           | 8:56       | 9:37     |
-| **all**   |       38 |           9 | 9:10           | 8:47       | 9:37     |
+| **all**   |       39 |           9 | 9:11           | 8:47       | 9:38     |
 
