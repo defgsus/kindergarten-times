@@ -2,28 +2,7 @@ import datetime
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv("./times.csv")
-df["date"] = pd.to_datetime(df["date"])
-df["weekday"] = [
-    row["date"].strftime("%A")
-    for i, row in df.iterrows()
-]
-
-df_not_managed = df[pd.isna(df["arrival"])]
-
-df_managed = (
-    df[~pd.isna(df["arrival"])].copy()
-)
-
-df_managed["minutes"] = [
-    int(row["arrival"].split(":")[0]) * 60 + int(row["arrival"].split(":")[1])
-    for _, row in df_managed.iterrows()
-]
-
-
-def minute_to_time(m: int) -> str:
-    m = int(round(m))
-    return f"{m//60}:{m%60:02d}"
+from src.times import Times
 
 
 def time_stats_table(df: pd.DataFrame, df_not_managed: pd.DataFrame) -> pd.DataFrame:
@@ -51,25 +30,30 @@ def time_stats_table(df: pd.DataFrame, df_not_managed: pd.DataFrame) -> pd.DataF
             "weekday": "**all**" if weekday == "all" else weekday,
             "drives": int(stats.loc["count", "minutes"]),
             "overslept": overslept,
-            "mean arrival": minute_to_time(stats.loc["mean", "minutes"]),
-            "earliest": minute_to_time(stats.loc["min", "minutes"]),
-            "latest": minute_to_time(stats.loc["max", "minutes"]),
+            "mean arrival": Times.minutes_to_time(stats.loc["mean", "minutes"]),
+            "earliest": Times.minutes_to_time(stats.loc["min", "minutes"]),
+            "latest": Times.minutes_to_time(stats.loc["max", "minutes"]),
         })
 
     return pd.DataFrame(table).set_index("weekday")
 
 
+def weather_stats_table(df: pd.DataFrame, df_not_managed: pd.DataFrame) -> pd.DataFrame:
+    pass
 
-stats_str = f"""# Statistics
+
+def update_readme():
+    times = Times()
+
+    stats_str = f"""# Statistics
 
 *updated on {datetime.date.today()}*
 
-{time_stats_table(df_managed, df_not_managed).to_markdown()}
+{time_stats_table(times.df_managed, times.df_not_managed).to_markdown()}
 
 """
+    print(stats_str)
 
-
-def update_readme(stats_str: str):
     with open("README.md") as fp:
         readme = fp.read()
 
@@ -80,5 +64,4 @@ def update_readme(stats_str: str):
         fp.write(readme)
 
 
-print(stats_str)
-update_readme(stats_str)
+update_readme()
