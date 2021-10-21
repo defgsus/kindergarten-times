@@ -20,6 +20,8 @@ class Times:
             for _, row in df.iterrows()
         ]
         df.set_index("date", inplace=True)
+        df["yes"] = (~pd.isna(df["arrival"])).astype(int)
+        df["no"] = pd.isna(df["arrival"]).astype(int)
 
         self.df_weather = Weather().table(hour=8)
         df = df.join(self.df_weather)
@@ -39,5 +41,8 @@ class Times:
 
     @classmethod
     def minutes_to_time(cls, m: int) -> str:
-        m = int(round(m))
-        return f"{m//60}:{m%60:02d}"
+        try:
+            m = int(round(m))
+            return f"{m//60}:{m%60:02d}"
+        except ValueError:
+            return "-"

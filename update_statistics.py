@@ -38,8 +38,18 @@ def time_stats_table(df: pd.DataFrame, df_not_managed: pd.DataFrame) -> pd.DataF
     return pd.DataFrame(table).set_index("weekday")
 
 
-def weather_stats_table(df: pd.DataFrame, df_not_managed: pd.DataFrame) -> pd.DataFrame:
-    pass
+def weather_stats_table(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+
+    df["temperature"] = (df["temp200"] / 3).round() * 3
+    #df["selector"] = df["steam_pressure"].round()
+    #df["selector"] = df["dew_point"].round()
+    grouped = df.groupby("temperature")
+    yes_no = grouped.sum()[["yes", "no"]]
+    minutes = grouped.mean()["minutes"].map(Times.minutes_to_time)
+    df = yes_no.join(minutes).T
+    df.index = ["driven", "not driven", "mean arrival"]
+    return df
 
 
 def update_readme():
@@ -49,7 +59,13 @@ def update_readme():
 
 *updated on {datetime.date.today()}*
 
+#### by weekday
+
 {time_stats_table(times.df_managed, times.df_not_managed).to_markdown()}
+
+#### by temperature
+
+{weather_stats_table(times.df).to_markdown()}
 
 """
     print(stats_str)
