@@ -29,7 +29,7 @@ for most people but i'm already scared!
 
 # Statistics
 
-*updated on 2021-10-21*
+*updated on 2021-10-22*
 
 #### by weekday
 
@@ -46,7 +46,7 @@ for most people but i'm already scared!
 
 |              | 3.0   | 6.0   | 9.0   | 12.0   | 15.0   | 18.0   | 21.0   | 24.0   |
 |:-------------|:------|:------|:------|:-------|:-------|:-------|:-------|:-------|
-| driven       | 1     | 1     | 2     | 8      | 8      | 11     | 8      | 3      |
-| not driven   | 0     | 2     | 2     | 4      | 5      | 4      | 1      | 2      |
-| average time | 9:38  | 9:11  | 9:20  | 9:03   | 9:07   | 9:09   | 9:17   | 9:15   |
+| driven       | 1     | 1     | 2     | 8      | 9      | 11     | 8      | 3      |
+| not driven   | 0     | 2     | 2     | 4      | 4      | 4      | 1      | 1      |
+| mean arrival | 9:38  | 9:11  | 9:20  | 9:03   | 9:07   | 9:09   | 9:17   | 9:15   |
 
