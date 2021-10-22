@@ -39,7 +39,7 @@ def time_stats_table(df: pd.DataFrame, df_not_managed: pd.DataFrame) -> pd.DataF
 
 
 def weather_stats_table(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
+    df = df[df["tag"] != "short-friday"]
 
     df["temperature"] = (df["temp200"] / 3).round() * 3
     #df["selector"] = df["steam_pressure"].round()
