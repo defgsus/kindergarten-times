@@ -39,8 +39,8 @@ for most people but i'm already scared!
 | Tuesday   |       16 |           3 | 9:24           | 8:56       | 10:15    |
 | Wednesday |       19 |           2 | 9:10           | 8:47       | 9:47     |
 | Thursday  |       12 |           6 | 9:13           | 8:51       | 9:40     |
-| Friday    |        7 |           4 | 9:10           | 8:56       | 9:37     |
-| **all**   |       68 |          18 | 9:15           | 8:47       | 10:15    |
+| Friday    |        7 |           5 | 9:10           | 8:56       | 9:37     |
+| **all**   |       68 |          19 | 9:15           | 8:47       | 10:15    |
 
 #### by temperature
 
