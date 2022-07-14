@@ -31,6 +31,7 @@ def time_stats_table(df: pd.DataFrame, df_not_managed: pd.DataFrame) -> pd.DataF
             "drives": int(stats.loc["count", "minutes"]),
             "overslept": overslept,
             "mean arrival": Times.minutes_to_time(stats.loc["mean", "minutes"]),
+            "median arrival": Times.minutes_to_time(df2["minutes"].median()),
             "earliest": Times.minutes_to_time(stats.loc["min", "minutes"]),
             "latest": Times.minutes_to_time(stats.loc["max", "minutes"]),
         })
