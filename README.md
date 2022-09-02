@@ -29,7 +29,7 @@ for most people but i'm already scared!
 
 # Statistics
 
-*updated on 2022-09-01*
+*updated on 2022-09-02*
 
 #### by weekday
 
@@ -39,8 +39,8 @@ for most people but i'm already scared!
 | Tuesday   |       23 |           6 | 9:19           | 9:18             | 8:29       | 10:15    |
 | Wednesday |       26 |           3 | 9:10           | 9:06             | 8:47       | 9:47     |
 | Thursday  |       16 |           8 | 9:10           | 9:06             | 8:51       | 9:40     |
-| Friday    |       10 |           7 | 9:09           | 9:03             | 8:50       | 9:37     |
-| **all**   |       98 |          30 | 9:12           | 9:08             | 8:29       | 10:15    |
+| Friday    |       11 |           7 | 9:07           | 9:00             | 8:44       | 9:37     |
+| **all**   |       99 |          30 | 9:11           | 9:08             | 8:29       | 10:15    |
 
 #### by temperature
 
