@@ -53,6 +53,32 @@ def weather_stats_table(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def consecutive_days(df: pd.DataFrame) -> pd.DataFrame:
+    count_dict = {
+        i: 0
+        for i in range(1, 6)
+    }
+    counter = 0
+    df = df.resample("1d").sum()
+    # print(df.to_markdown())
+    all = 0
+    for i, row in df.iterrows():
+        if row["yes"]:
+            counter += 1
+            all += 1
+        elif counter:
+            count_dict[counter] += 1
+            counter = 0
+    df = pd.DataFrame(
+        count_dict.values(),
+        index=count_dict.keys(),
+        columns=["number of times"],
+    )
+    df.index.rename("days in row", inplace=True)
+    df.sort_index(inplace=True)
+    return df.replace({0: "-"})
+
+
 def update_readme():
     times = Times()
 
@@ -67,6 +93,10 @@ def update_readme():
 #### by temperature
 
 {weather_stats_table(times.df).to_markdown()}
+
+#### kindergarten days in a row
+
+{consecutive_days(times.df_managed).to_markdown()}
 
 """
     print(stats_str)
