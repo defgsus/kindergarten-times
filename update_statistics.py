@@ -94,7 +94,7 @@ def update_readme():
 
 {weather_stats_table(times.df).to_markdown()}
 
-#### kindergarten days in a row
+#### consecutive kindergarten days
 
 {consecutive_days(times.df_managed).to_markdown()}
 
