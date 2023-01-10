@@ -50,6 +50,7 @@ def weather_stats_table(df: pd.DataFrame) -> pd.DataFrame:
     minutes = grouped.mean()["minutes"].map(Times.minutes_to_time)
     df = yes_no.join(minutes).T
     df.index = ["driven", "not driven", "mean arrival"]
+    df = df.replace({0: "-"})
     return df
 
 

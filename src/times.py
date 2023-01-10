@@ -26,6 +26,9 @@ class Times:
         self.df_weather = Weather().table(hour=8)
         df = df.join(self.df_weather)
 
+        # TODO: these are rare, ignore them for now
+        df = df[df["tag"] != "delegated"]
+
         self.df = df
         self.df_not_managed = df[pd.isna(df["arrival"])]
 
@@ -36,7 +39,7 @@ class Times:
         try:
             tup = t.split(":")
             return int(tup[0]) * 60 + int(tup[1])
-        except AttributeError:
+        except (AttributeError, ValueError):
             pass
 
     @classmethod
