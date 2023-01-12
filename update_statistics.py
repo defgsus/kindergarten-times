@@ -54,14 +54,14 @@ def weather_stats_table(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def consecutive_days(df: pd.DataFrame) -> pd.DataFrame:
+def consecutive_days(times: Times) -> pd.DataFrame:
     count_dict = {
         i: 0
         for i in range(1, 6)
     }
     counter = 0
-    df = df.resample("1d").sum()
-    # print(df.to_markdown())
+    df = times.df_managed.resample("1d").sum()
+
     all = 0
     for i, row in df.iterrows():
         if row["yes"]:
@@ -70,6 +70,9 @@ def consecutive_days(df: pd.DataFrame) -> pd.DataFrame:
         elif counter:
             count_dict[counter] += 1
             counter = 0
+    if counter:
+        count_dict[counter] += 1
+
     df = pd.DataFrame(
         count_dict.values(),
         index=count_dict.keys(),
@@ -77,6 +80,12 @@ def consecutive_days(df: pd.DataFrame) -> pd.DataFrame:
     )
     df.index.rename("days in row", inplace=True)
     df.sort_index(inplace=True)
+
+    # make sure the above counting code is working
+    num_times = (df.index * df["number of times"]).sum()
+    num_times_true = times.df_managed.shape[0]
+    assert num_times_true == num_times, f"expected {num_times_true}, got {num_times}"
+
     return df.replace({0: "-"})
 
 
@@ -97,7 +106,7 @@ def update_readme():
 
 #### consecutive kindergarten days
 
-{consecutive_days(times.df_managed).to_markdown()}
+{consecutive_days(times).to_markdown()}
 
 """
     print(stats_str)
