@@ -29,18 +29,18 @@ for most people but i'm already scared!
 
 # Statistics
 
-*updated on 2024-04-22*
+*updated on 2024-04-24*
 
 #### by weekday
 
 | weekday   |   drives |   overslept | mean arrival   | median arrival   | earliest   | latest   |
 |:----------|---------:|------------:|:---------------|:-----------------|:-----------|:---------|
 | Monday    |       56 |          14 | 9:11           | 9:08             | 8:30       | 10:14    |
-| Tuesday   |       64 |          12 | 9:24           | 9:24             | 8:29       | 10:20    |
+| Tuesday   |       65 |          12 | 9:24           | 9:24             | 8:29       | 10:20    |
 | Wednesday |       61 |           8 | 9:16           | 9:11             | 8:47       | 10:26    |
 | Thursday  |       40 |          17 | 9:23           | 9:19             | 8:51       | 10:32    |
 | Friday    |       18 |          12 | 9:11           | 9:04             | 8:44       | 9:56     |
-| **all**   |      239 |          63 | 9:18           | 9:15             | 8:29       | 10:32    |
+| **all**   |      240 |          63 | 9:18           | 9:15             | 8:29       | 10:32    |
 
 #### by temperature
 
@@ -54,7 +54,7 @@ for most people but i'm already scared!
 
 |   days in row |   number of times |
 |--------------:|------------------:|
-|             1 |                52 |
+|             1 |                53 |
 |             2 |                33 |
 |             3 |                16 |
 |             4 |                16 |
