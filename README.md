@@ -29,7 +29,7 @@ for most people but i'm already scared!
 
 # Statistics
 
-*updated on 2024-07-25*
+*updated on 2024-07-26*
 
 #### by weekday
 
@@ -39,8 +39,8 @@ for most people but i'm already scared!
 | Tuesday   |       73 |          12 | 9:24           | 9:24             | 8:29       | 10:20    |
 | Wednesday |       67 |           8 | 9:15           | 9:11             | 8:47       | 10:26    |
 | Thursday  |       43 |          19 | 9:24           | 9:20             | 8:51       | 10:32    |
-| Friday    |       20 |          12 | 9:14           | 9:07             | 8:44       | 9:56     |
-| **all**   |      266 |          65 | 9:19           | 9:16             | 8:29       | 10:32    |
+| Friday    |       21 |          12 | 9:15           | 9:08             | 8:44       | 9:56     |
+| **all**   |      267 |          65 | 9:19           | 9:16             | 8:29       | 10:32    |
 
 #### by temperature
 
@@ -57,6 +57,6 @@ for most people but i'm already scared!
 |             1 |                57 |
 |             2 |                36 |
 |             3 |                20 |
-|             4 |                17 |
-|             5 |                 2 |
+|             4 |                16 |
+|             5 |                 3 |
 
